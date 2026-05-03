@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/writers-s
 
 // ===== Middleware =====
 app.use(cors({
-  origin: process.env.FRONT_END_URL, // frontend
+  origin: "*", // frontend
   credentials: true
 }));
 app.use(bodyParser.json());
@@ -68,6 +68,12 @@ app.use('/api/cart', cartRoutes);
 app.use('/api/favorites', favoritesRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/orders', orderRoutes);
+
+//test route
+app.get('/', (req, res) => {
+  res.send('Welcome to the Writers Shop API!');
+});
+
 
 // File upload endpoint
 app.post('/api/upload', upload.single('image'), (req, res) => {
