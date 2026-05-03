@@ -17,7 +17,7 @@ descriptions = [f"{t} by {a}" for t, a in zip(titles, authors)]
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 # Generate embeddings
-print("🔄 Generating embeddings...")
+print("Generating embeddings...")
 embeddings = model.encode(descriptions, show_progress_bar=True)
 
 # Save files
@@ -35,4 +35,4 @@ with open("book_isbns.txt", "w", encoding="utf-8") as f:
     for isbn in isbns:
         f.write(isbn + "\n")
 
-print("✅ Data saved.")
+print("Data saved.")

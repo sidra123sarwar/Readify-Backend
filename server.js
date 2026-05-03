@@ -110,7 +110,7 @@ app.post('/api/recommend', (req, res) => {
 // API Status Endpoint
 app.get('/api', (req, res) => {
   res.json({
-    status: '✅ API is working',
+    status: 'API is working',
     endpoints: {
       auth: { register: 'POST /api/auth/register', login: 'POST /api/auth/login', validateToken: 'GET /api/auth/verify' },
       users: { profile: 'GET /api/users/profile', update: 'PUT /api/users/profile', validate: 'GET /api/users/validate' },
@@ -123,16 +123,16 @@ app.get('/api', (req, res) => {
 });
 
 // ===== 404 Handler =====
-app.use((req, res) => res.status(404).json({ message: `❌ Route ${req.originalUrl} not found` }));
+app.use((req, res) => res.status(404).json({ message: `Route ${req.originalUrl} not found` }));
 
 // ===== Global Error Handler =====
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).json({ message: '❌ Internal server error', error: process.env.NODE_ENV === 'development' ? err : {} });
+  res.status(500).json({ message: 'Internal server error', error: process.env.NODE_ENV === 'development' ? err : {} });
 });
 
 // ===== Start Server =====
 app.listen(PORT, () => {
-  // console.log(`🚀 Server running at http://localhost:${PORT}`);
-  // console.log(`📘 API docs at http://localhost:${PORT}/api`);
+  // console.log(`Server running at http://localhost:${PORT}`);
+  // console.log(`API docs at http://localhost:${PORT}/api`);
 });

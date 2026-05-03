@@ -23,7 +23,7 @@ const createAdmin = async () => {
     });
 
     await admin.save();
-    console.log('✅ Admin created successfully!');
+    console.log('Admin created successfully!');
     console.log('Email: admin@readify.com');
     console.log('Password: admin123');
     

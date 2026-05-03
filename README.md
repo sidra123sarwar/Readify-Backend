@@ -2,7 +2,7 @@
 
 A full-featured book e-commerce and recommendation platform with AI-powered book discovery, user authentication, shopping cart, and admin management capabilities.
 
-## 🚀 Features
+## Features
 
 - **AI-Powered Recommendations**: Semantic-based book recommendations using sentence transformers and cosine similarity
 - **User Authentication**: Secure JWT-based authentication with email verification
@@ -14,7 +14,7 @@ A full-featured book e-commerce and recommendation platform with AI-powered book
 - **User Profiles**: Comprehensive user profile management with password reset capabilities
 - **CORS Support**: Ready for frontend integration
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component | Technology |
 |-----------|-----------|
@@ -28,14 +28,14 @@ A full-featured book e-commerce and recommendation platform with AI-powered book
 | **Validation** | express-validator |
 | **Email** | Nodemailer |
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js (v14 or higher)
 - MongoDB (local or Atlas URI)
 - Python 3.7+ (for recommendation engine)
 - npm or yarn
 
-## 🔧 Installation
+## Installation
 
 ### 1. Clone & Setup
 
@@ -78,7 +78,7 @@ UPLOAD_PATH=./uploads
 ASSET_PATH=D:/assets
 ```
 
-**⚠️ Important**: Never commit `.env` to version control. Use environment variables in production.
+**Important**: Never commit `.env` to version control. Use environment variables in production.
 
 ### 3. Prepare Recommendation Data
 
@@ -104,7 +104,7 @@ node scripts/fixStock.js         # Fix inventory issues
 node scripts/updateImages.js     # Update image paths
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Start the Server
 
@@ -123,7 +123,7 @@ curl http://localhost:5000/api/books
 # If connected, returns: []
 ```
 
-## 📚 API Documentation
+## API Documentation
 
 ### Authentication Routes
 ```
@@ -201,7 +201,7 @@ Form: multipart/form-data with 'image' field
 Response: { "filePath": "/uploads/1234567890.jpg" }
 ```
 
-## 🤖 AI Recommendation Engine
+## AI Recommendation Engine
 
 The recommendation system uses **Sentence Transformers** (all-MiniLM-L6-v2 model) to:
 
@@ -230,7 +230,7 @@ Edit `recommend.py` to:
 - Adjust results: Change `-5:` to desired count
 - Modify description input: Update `descriptions` variable
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 backend/
@@ -257,7 +257,7 @@ backend/
 └── package.json
 ```
 
-## 🔐 Authentication
+## Authentication
 
 ### User Authentication Flow
 
@@ -277,7 +277,7 @@ curl -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   http://localhost:5000/api/users/profile
 ```
 
-## 🛡️ Security Features
+## Security Features
 
 - Password hashing with bcryptjs
 - JWT token-based authentication
@@ -286,7 +286,7 @@ curl -H "Authorization: Bearer YOUR_JWT_TOKEN" \
 - Environment-based configuration
 - Admin role-based access control
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 | Issue | Solution |
 |-------|----------|
@@ -296,7 +296,7 @@ curl -H "Authorization: Bearer YOUR_JWT_TOKEN" \
 | File upload fails | Ensure `uploads/` directory exists and has write permissions |
 | Python script errors | Install requirements: `pip install -r requirements.txt` |
 
-## 📝 Environment Variables
+## Environment Variables
 
 | Variable | Description | Example |
 |----------|-------------|---------|
@@ -308,7 +308,7 @@ curl -H "Authorization: Bearer YOUR_JWT_TOKEN" \
 | `EMAIL_USER` | Gmail for notifications | `your@gmail.com` |
 | `EMAIL_PASS` | Gmail app password | `xxxx xxxx xxxx xxxx` |
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! To get started:
 
@@ -320,18 +320,18 @@ We welcome contributions! To get started:
 
 For major changes, open an issue first to discuss proposed changes.
 
-## 📄 License
+## License
 
 This project is licensed under the ISC License. See LICENSE file for details.
 
-## 👥 Support & Contact
+## Support & Contact
 
 For questions or issues:
 - Open an GitHub issue for bug reports
 - Check existing documentation for FAQs
 - Contact the development team
 
-## 🎯 Roadmap
+## Roadmap
 
 - [ ] Advanced filtering and search
 - [ ] Book reviews and ratings
@@ -343,4 +343,4 @@ For questions or issues:
 
 ---
 
-**Made with ❤️ for book lovers** | Version 1.0.0
+**Made with for book lovers** | Version 1.0.0
